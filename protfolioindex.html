@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="protfoliostyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head> 
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#project">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>BBA-CA Student</p>
+                <h1>Hi, I'm <span>NIJIL ELLICKAL</span></h1>
+            </div>
+        </div>
+    </div>
+    <!----------------about------------------>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Nijilpic-modified.jpg" width="300px" height="500px">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p>I am a person with the ability to undertake any task thereby working on it effectively and efficiently. I keep myself 
+                        open to limitless learning and aim for regular progress in whatever I pursue. I would willingly accept any authority 
+                        I am charged with. I would love to work, explore, learn, and contribute to a healthy and developing working environment.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experince')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web Development</span><br>HTML<br>CSS<br>JavaScript<br>PHP & AJAX</li>
+                            <li><span>Programming</span><br>C Programming<br>Java Programming<br>SQL</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experince">
+                        <ul>
+                            <li><span>Certification</span><br>Fundamentals of Full Stack Development Training by Excelr<br>
+                            Appreciation for the Best Speaker by Indira College of Commerce and Science</li>
+                            <li><span>Internships</span><br>Placement Coordinator at IGI<br>Currently at Oasis InfoByte</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022-2025</span><br>BBA-CA - ICCS</li>
+                            <li><span>2022</span><br>12<sup>th</sup> - HSC - St. Ursula H.S.S Akrudi</li>
+                            <li><span>2020</span><br>10<sup>th</sup> - SSC - Sant Sai High School Bhosari</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!----project-->
+    <div class="project" id="project">
+        <div class="container">
+            <h1 class="sub-title">Projects</h1>
+                <div class="project-list">
+                    <div>
+                        <a href="#" class="fa fa-code"></a>
+                        <h2>Portfolio</h2>
+                        <p>In this Project I have created My Portfolio which conatins my Skills, Experiences, Educational Detals, and CV.
+                            I have created this projection using HTML, CSS, and JavaScript
+                        </p>
+                    </div>
+                    <div>
+                        <a href="#" class="fa fa-crop"></a>
+                        <h2>Landing Page</h2>
+                        <p>In this Project I have created a Landing page. In this project I have used HTML, CSS, and JavaScript</p>                        
+                    </div>
+                    <div>
+                        <a href="#" class="fa fa-calculator"></a>
+                        <h2>Calulator</h2>
+                        <p>In this project I have created a Basic Calulator using HTML, CSS, and Javascript which performs basic operations like
+                            Addition, Substraction, Multiplication, and Division.
+                        </p>                   
+                    </div>
+                </div>
+        </div>
+    </div>
+
+
+    <!------------------contact--------------->
+    <div class="contact" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact me</h1>
+                    <p><a href="#" class="fa fa-paper-plane"></a>nijilep2728@gmail.com</p>
+                    <p><a href="#" class="fa fa-phone"></a>8446847278</p>
+                    <div class="social-icons">
+                        <p>
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="#" class="fa fa-twitter"></a>
+                        <a href="#" class="fa fa-instagram"></a>
+                        <a href="#" class="fa fa-linkedin"></a>
+                        </p>
+                    </div>
+                    <a href="Nijil Ellickal cv.pdf" download class="btn">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="text" name="email" placeholder="Your email" required>
+                        <textarea name="Message" row="10" placeholder="Your message"></textarea>
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Nijil Ellickal </p>
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+</body>
+</html>
